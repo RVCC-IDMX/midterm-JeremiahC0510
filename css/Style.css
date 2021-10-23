@@ -2,63 +2,166 @@
 /* Jeremiah Curtis */
 
 body{
-    background-color: #886644;
+    background-image: linear-gradient(#765729, black);
     margin: 3em;
+    box-shadow: inset 12px 12px 20px 0px #000000;
     filter: drop-shadow(10px 10px 10px black);
 }
 
 header{
+    padding: 20px;
     text-align: center;
     color: white;
+    font-family: Georgia;
+    font-style: bold;
+    box-shadow: inset 12px 12px 20px 0px #000000;
     filter: drop-shadow(10px 10px 10px black);
-    border: 5px solid #886644;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border: 2px solid #886644;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(/img/cave.jpg);
 }
 
+
 nav{
-    border: 5px solid #886644;
-    background-color: whitesmoke;
-    text-align: center;
+    border: 2px solid #886644;
+    background-color: white;
+    box-shadow: inset 12px 12px 20px 0px #000000;
     filter: drop-shadow(10px 10px 10px black);
+    opacity: 75%;
+    text-align: center;   
+}
+/*Making Navigation Links into Rows and adding lines in between*/
+nav ul li{
+    display: inline-flex;
+    padding: 4px 20px;
+    
+}
+nav ul li:not(:last-child) {
+    border-right: 2px double black;
+}
+
+/*Adding style to navigation links*/
+a {
+    color: black;
+    text-decoration-line: none;
+     ;
+}
+a:hover{
+    color: #a52a2a;
+    text-decoration-line: underline;
 }
 
 /*The book section leading into the main paragraphs*/
 h2{
     text-align: left;
+    border-bottom-style: dotted;
+    font-size: 20pt;
 }
 
 main{
-    background-color: whitesmoke;
+    font-size: 14pt;
+    background-color: white;
+    opacity: 75%;
     border: 5px solid #886644;
+    box-shadow: inset 12px 12px 20px 0px #000000;
     filter: drop-shadow(10px 10px 10px black);
+    padding: 20px;
+}
+main p:first-of-type::first-line{
+    font-size: 18pt;
 }
 
 main img{
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     float: left;
-    padding: 20px;
-}
-
-main figure{
-    align-content: center;
-}
-
-main figcaption{
-    text-align: center;
-}
-
-aside{
-    border: 5px solid #886644;
-    background-color: whitesmoke;
+    box-shadow: inset 12px 12px 20px 0px #000000;
     filter: drop-shadow(10px 10px 10px black);
 }
+
+figure{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+figcaption{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Turning all non-english into italics*/
+span{
+    font-style: italic;
+}
+
+/*Turning all character names bold*/
+.character{
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+/*formatting the aside bar*/
+aside{
+    border: 2px solid #886644;
+    background-color: white;
+    opacity: 75%;
+    box-shadow: inset 12px 12px 20px 0px #000000;
+    filter: drop-shadow(10px 10px 10px black);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+    grid-gap: 5px;
+}   
+h2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+/*trying to format the flowbox so that I can get them next to each other*/
+aside div{
+    grid-column: 2;
+}
+.submission{
+    background-color: whitesmoke;
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
+.opinion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+    text-align: center;
+    margin-left: 1rem;
+}
+.signature{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    font-size: 12pt;
+}
+    
 
 footer{
-    background-color: whitesmoke;
+    background-color: white;
+    opacity: 75%;
     text-align: center;
+    box-shadow: inset 12px 12px 20px 0px #000000;
     filter: drop-shadow(10px 10px 10px black);
-    border: 10px solid #886644;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border: 2px solid #886644;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
