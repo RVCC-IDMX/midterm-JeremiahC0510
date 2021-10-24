@@ -165,3 +165,34 @@ footer{
     border-bottom-right-radius: 10px;
 }
 
+
+
+/*Making sure aside section splits off into 3 boxes in a row at 786pixels = 49.13em*/
+@media screen and (min-width: 49.13em) {
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
+    aside div{
+        grid-column: auto;
+        max-width: auto;
+    }
+    h2{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .opinion{
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .signature{
+        display: flex;
+        justify-content: right;
+        align-items: right;
+    }
+}
